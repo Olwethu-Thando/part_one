@@ -48,7 +48,7 @@ namespace part_one
 
                 //prompt the text color
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write("USER: "+username);
+                Console.Write("USER: ");
 
                 Console.ForegroundColor = ConsoleColor.Gray;
                 username = Console.ReadLine();
@@ -79,14 +79,15 @@ namespace part_one
                 Console.Write("Bot : ");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Please enter name....");
-                //returnfalse
 
                 return false;
+            }
+        }
 
-            }//end of else
-
-
-
+    
+        public string getName()
+        {
+            return username;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace part_one
              logo  image =new logo() {};
 
             //creating chat method 
-            //chats  chat = new chats() {};
+            chats  chat = new chats() {};
 
             // calling welcome method
             greeting.welcome();
@@ -29,14 +29,26 @@ namespace part_one
             // calling ther ask_name method 
             greeting.ask_user();
 
+            string name = greeting.getName();
+
             //calling chat method 
+            Console.WriteLine("\n \"You can ask me about passwords, phishing, safe browsing, viruses, and online safety tips.\"");
+            Console.WriteLine("Type 'exit' to close the chat.\n");
+
+            // start chat
+            chats chats = new chats();
+            chat.ai_chat(name);
 
 
-            
+            Console.ReadLine();
 
 
 
-             
+
+
+
+
+
 
         }
     }

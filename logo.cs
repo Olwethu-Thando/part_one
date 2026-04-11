@@ -22,7 +22,7 @@ namespace part_one
             string fullpath = AppDomain.CurrentDomain.BaseDirectory;
             //now combine the paths
             path = fullpath.Replace(@"bin\Debug\", "logoo.png");
-
+            
             Bitmap image = new Bitmap(path);
 
             // Resize for better console fit
