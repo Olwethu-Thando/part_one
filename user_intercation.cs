@@ -14,11 +14,11 @@ namespace part_one
         {//start of method
 
             //message to welcome with text color
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("------------------------------");
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("    [Welcome to Cyber Security Awareness ChatBot]         ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("------------------------------");
             //reset the color
             Console.ResetColor();
