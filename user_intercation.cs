@@ -17,7 +17,7 @@ namespace part_one
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("    [Welcome to Cyber Security Awareness ChatBot]         ");
+            Console.WriteLine("    [Welcome to Cyber Security Awareness ChatBot] ");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("------------------------------");
             //reset the color
@@ -64,7 +64,7 @@ namespace part_one
             if (username != "")
             {//start of if
                 //success message
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" Bot: ");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Hey " + username);
@@ -75,7 +75,7 @@ namespace part_one
             else
             { //start of else
                 //error message
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.Write("Bot : ");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Please enter name....");
