@@ -16,9 +16,9 @@ namespace part_one
             //message to welcome with text color
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("------------------------------");
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("    [Welcome to Cyber Security Awareness ChatBot]         ");
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("------------------------------");
             //reset the color
             Console.ResetColor();

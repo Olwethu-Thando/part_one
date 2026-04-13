@@ -80,7 +80,9 @@ namespace part_one
             // ignore words
             ignore.Add("what");
             ignore.Add("is");
-            ignore .Add("about");
+            ignore.Add("about");
+            ignore.Add("how");
+            ignore.Add("when ");
         }
 
         public void ai_chat(string name)

@@ -31,7 +31,7 @@ namespace part_one
             Bitmap resized = new Bitmap(image, new Size(width, height));
 
             // Default color , you can set yours before this line
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Magenta;
             string asciiChars = "@#S%?*+;:,. ";
 
             //start by the height

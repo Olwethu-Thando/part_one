@@ -30,10 +30,15 @@ namespace part_one
             greeting.ask_user();
 
             string name = greeting.getName();
-
-            //calling chat method 
-            Console.WriteLine("\n \"You can ask me about passwords, phishing, safe browsing, viruses, and online safety tips.\"");
-            Console.WriteLine("Type 'exit' to close the chat.\n");
+            // Play greeting audio
+           
+           
+            // Greeting message
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\nHello " + name + "! Ask me anything about cybersecurity.");
+            Console.WriteLine("Type 'exit' to quit.\n");
+            Console.ResetColor();
+            
 
             // start chat
             chats chats = new chats();
