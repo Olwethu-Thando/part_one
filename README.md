@@ -1,95 +1,193 @@
-# part_one
-Cyber Security Awareness ChatBot (Part 1)
+# Cyber Security Awareness ChatBot (Part 1)
 
 ## Overview
-This project is a C# Console Application chatbot designed to educate users about basic cybersecurity practices.  
-The chatbot interacts with the user by answering questions related to online safety such as passwords, phishing, safe browsing, and viruses.
+
+This project is a C# Console Application chatbot developed to educate users about basic cybersecurity practices.
+The chatbot interacts with the user by answering questions related to online safety such as passwords, phishing, safe browsing, viruses, and general security tips.
 
 ---
 
 ## Purpose
-The main purpose of this chatbot is to:
-- Create awareness about cybersecurity risks
-- Help users understand how to stay safe online
-- Provide simple and clear security tips
+
+The purpose of this chatbot is to:
+
+* Raise awareness about cybersecurity threats
+* Help users understand how to protect themselves online
+* Provide simple and practical security advice
 
 ---
 
 ## Features
-- Voice greeting when the program starts
-- ASCII art logo display
-- User name input with validation
-- Personalised chat (uses the user’s name)
-- Cybersecurity questions and answers
-- Input validation and error handling
-- Exit option to close the program
+
+* Voice greeting using a WAV audio file
+* ASCII art logo display in the console
+* User name input with validation
+* Personalised chat using the user’s name
+* Keyword-based chatbot responses using ArrayLists
+* Input validation and error handling
+* Exit option to close the program
 
 ---
 
 ## Program Structure
-The program is divided into multiple classes for better organisation:
 
-- Program.cs → Main entry point of the application  
-- user_intercation.cs → Handles greeting and user input  
-- audio.cs → Plays voice greeting  
-- logo.cs → Displays ASCII art  
-- chats.cs → Handles chatbot logic using keywords and responses  
+The program is divided into multiple classes:
 
----
-
-## How It Works
-- The chatbot uses ArrayLists to store keywords and answers.
-- The `.Add()` method is used to insert data.
-- When the user types a question, the program:
-  1. Breaks the sentence into words  
-  2. Ignores unnecessary words  
-  3. Matches keywords  
-  4. Displays the correct response  
+* Program.cs
+* user_intercation.cs
+* audio.cs
+* logo.cs
+* chats.cs
 
 ---
 
-## Example InteractionBot: Enter your name...
-User: Olly
+## Multimedia Integration
+
+### Sound (Voice Greeting)
+
+The program plays a sound when it starts using a `.wav` file.
+
+```csharp
+SoundPlayer player = new SoundPlayer("greeting.wav");
+player.Play();
+```
+
+This improves user experience by making the chatbot more interactive.
+
+---
+
+### ASCII Image (Logo)
+
+A text-based logo is displayed in the console:
+
+```csharp
+Console.WriteLine("===========================================");
+Console.WriteLine("   CYBER SECURITY AWARENESS BOT");
+Console.WriteLine("===========================================");
+```
+
+This improves the visual appearance of the application.
+
+---
+
+## User Input and Validation
+
+The program ensures that the user enters a valid name:
+
+```csharp
+do
+{
+    Console.Write("User: ");
+    username = Console.ReadLine();
+
+} while (string.IsNullOrWhiteSpace(username));
+```
+
+This prevents empty input and improves usability.
+
+---
+
+## Chatbot Logic
+
+The chatbot uses ArrayLists to store keywords and answers:
+
+```csharp
+ArrayList holder = new ArrayList();
+ArrayList answers = new ArrayList();
+
+holder.Add("password");
+answers.Add("Always use strong passwords with a mix of letters, numbers, and symbols.");
+```
+
+When the user enters a question, the program checks for matching keywords:
+
+```csharp
+if (question.Contains(holder[i].ToString()))
+{
+    Console.WriteLine("Bot: " + answers[i]);
+}
+```
+
+---
+
+## Personalised Interaction
+
+The chatbot uses the user's name during conversation:
+
+```csharp
+Console.Write(name + ": ");
+```
+
+Example:
 
 Olly: password
 Bot: Always use strong passwords with a mix of letters, numbers, and symbols.
 
-Olly: phishing
-Bot: Phishing is when scammers trick you into giving personal information.## How to Run
-1. Open the project in Visual Studio  
-2. Make sure all classes are included  
-3. Run the program  
-4. Enter your name  
-5. Start chatting  
+---
+
+## How It Works
+
+1. The program starts and displays a welcome message
+2. A sound is played and a logo is shown
+3. The user enters their name
+4. The chatbot processes user input
+5. Keywords are matched with responses
+6. The chatbot displays the correct answer
 
 ---
 
-## Topics Covered
-- Password security  
-- Phishing awareness  
-- Safe browsing  
-- Malware and viruses  
-- Online safety tips  
+## CI Workflow
+
+A Continuous Integration workflow was implemented using GitHub Actions:
+
+```yaml
+name: .NET Build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+    - run: dotnet build
+```
+
+This ensures the project builds successfully.
+
+<img width="706" height="194" alt="image" src="https://github.com/user-attachments/assets/d763ffc8-8088-4c9b-8b2a-2616543c7515" />
+screenshot under word document submitted 
+
 
 ---
 
 ## Technologies Used
-- C#  
-- .NET Console Application  
-- Visual Studio  
+
+* C#
+* .NET Console Application
+* Visual Studio
 
 ---
 
 ## Conclusion
-This project demonstrates basic programming concepts such as:
-- Classes and methods  
-- Arrays (ArrayList)  
-- Loops and conditions  
-- User interaction  
 
-It also promotes awareness of cybersecurity in a simple and interactive way.
+This project demonstrates:
+
+* Object-oriented programming using multiple classes
+* Use of ArrayLists for data storage
+* Input validation and error handling
+* Interactive user experience
+
+It also promotes cybersecurity awareness in a simple and effective way.
 
 ---
 
 ## Author
-[Olwethu]
+
+olwethu 
